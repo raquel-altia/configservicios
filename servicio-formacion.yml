@@ -1,0 +1,19 @@
+spring:
+  #para asignar los valores de authentication
+  security:
+    user:
+      name: user3
+      password: user3  
+  #para que swagger resuelva correctamente los paths internos
+  mvc:    
+    pathmatch:
+      matching-strategy: ant-path-matcher
+#registro de servicio en eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    #descubrimiento de servicios en eureka 
+    register-with-eureka: true
+server:
+  port: 7000
